@@ -1,9 +1,10 @@
 package davidebraghi.exceptions;
 
-import com.github.ladutsko.isbn.ISBN;
+
+import java.util.UUID;
 
 public class NotFoundException extends RuntimeException {
-    public NotFoundException(ISBN id) {
-        super("Record with ID: " + id + " was not found, please try again");
+    public NotFoundException(UUID catalogueId) {
+        super("Record with ID: " + catalogueId + " was not found, please try again");
     }
 }

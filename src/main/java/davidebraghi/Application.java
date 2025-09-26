@@ -37,7 +37,7 @@ public class Application {
         return catalDAO;
     }
 
-    // Metodi dell'app ---------------------------------------------------------------------------------------------------------------
+    // Metodi dell'app ---------------------------------------------------------------------------------------------------
 
     public static void main(String[] args) {
         EntityManager em = emf.createEntityManager();
@@ -67,10 +67,9 @@ public class Application {
 
         catalDAO.findAndDeleteByID(UUID.fromString("099fde2b-30f9-4f32-9d3a-5742be3f5db3"));
 
-        // Chiusura default em & emf
+        // Chiusura default em & emf _____________________________________________________________________________________
+
         em.close();
         emf.close();
     }
-
-
 }

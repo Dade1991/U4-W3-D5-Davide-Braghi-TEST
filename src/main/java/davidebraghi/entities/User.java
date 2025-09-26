@@ -4,6 +4,7 @@ package davidebraghi.entities;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 
 import java.time.LocalDate;
 import java.util.UUID;
@@ -12,10 +13,13 @@ import java.util.UUID;
 public class User {
     @Id
     @GeneratedValue
+    @OneToMany
     private UUID userId;
     private String name;
     private String surname;
     private LocalDate birthday;
+
+    // Costruttori
 
     public User() {
     }
